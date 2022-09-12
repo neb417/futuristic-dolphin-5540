@@ -57,7 +57,7 @@ RSpec.describe 'Mechanic Index Page' do
         expect(page).to_not have_content(@six_flags.name)
       end
 
-      xit 'displays the average experience for the mechanics' do
+      it 'displays the average experience for the mechanics' do
         visit '/mechanics'
 
         expect(page).to have_content("Average experience of Mechanics: 12.67")

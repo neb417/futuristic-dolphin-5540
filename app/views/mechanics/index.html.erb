@@ -1,4 +1,5 @@
 <h1>All Mechanics</h1>
+<p>Average experience of Mechanics: <%= @avg_years.round(2) %></p>
 
 <% @mechanics.each do |mechanic| %>
   <div id="mechanic_<%= mechanic.id%>">
