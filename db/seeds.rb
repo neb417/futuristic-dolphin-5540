@@ -16,3 +16,7 @@ Ride.destroy_all
 @ferris = @six_flags.rides.create!(name: 'Ferris Wheel', thrill_rating: 7, open: false)
 
 @jaws = @universal.rides.create!(name: 'Jaws', thrill_rating: 5, open: true)
+
+@mech1 = Mechanic.create(name: 'James Guy', years_experience: 13)
+@mech2 = Mechanic.create(name: 'Laura Coaster', years_experience: 3)
+@mech3 = Mechanic.create(name: 'Remi Pathos', years_experience: 22)
