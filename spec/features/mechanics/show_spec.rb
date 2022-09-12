@@ -23,7 +23,7 @@ RSpec.describe 'Mechanic Show Page' do
   describe 'As a user' do
     describe 'User Story 2 when visiting the mechanic show page' do
       it "user views mechanic's attributes" do
-        visit "/mechanics#{@mech1.id}"
+        visit "/mechanics/#{@mech1.id}"
 
         expect(page).to have_content("Name: #{@mech1.name}")
         expect(page).to have_content("Experience: #{@mech1.years_experience} years")
@@ -37,7 +37,7 @@ RSpec.describe 'Mechanic Show Page' do
         expect(page).to_not have_content(@six_flags.name)
       end
 
-      xit "displays the mechanic's list of open rides being worked on" do
+      it "displays the mechanic's list of open rides being worked on" do
         visit "/mechanics/#{@mech1.id}"
 
         expect(page).to have_content("Ride being repaired/maintained:")
