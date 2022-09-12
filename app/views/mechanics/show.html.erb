@@ -2,3 +2,15 @@
 
 <h3>Name: <%= @mechanic.name %></h3>
 <p>Experience: <%= @mechanic.years_experience %> years</p>
+
+<h3>Ride being repaired/maintained: </h3>
+<ul>
+  <% @rides.each do |ride| %>
+    <%if ride.open == true %>
+      <div id="ride_<%=ride.id%>">
+        <li><%= ride.name %></li>
+    <% else %>
+      <% next %>
+    <% end %>
+  <% end %>
+</ul>
