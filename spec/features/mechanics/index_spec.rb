@@ -27,9 +27,9 @@ RSpec.describe 'Mechanic Index Page' do
 
     @jaws = @universal.rides.create!(name: 'Jaws', thrill_rating: 5, open: true)
 
-    @mech1 = Mechanic.create(name: 'James Guy', years_experience: 13)
-    @mech2 = Mechanic.create(name: 'Laura Coaster', years_experience: 3)
-    @mech3 = Mechanic.create(name: 'Remi Pathos', years_experience: 22)
+    @mech1 = @six_flags.mechanics.create!(name: 'James Guy', years_experience: 13)
+    @mech2 = @six_flags.mechanics.create!(name: 'Laura Coaster', years_experience: 3)
+    @mech3 = @universal.mechanics.create!(name: 'Remi Pathos', years_experience: 22)
   end
 
   describe 'As a user' do
