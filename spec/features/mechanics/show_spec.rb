@@ -37,7 +37,7 @@ RSpec.describe 'Mechanic Show Page' do
         expect(page).to_not have_content(@six_flags.name)
       end
 
-      xit "displays the mechanic's list of open rides being worked on" do
+      it "displays the mechanic's list of open rides being worked on" do
         visit "/mechanics/#{@mech1.id}"
 
         expect(page).to have_content("Ride being repaired/maintained:")
@@ -48,7 +48,7 @@ RSpec.describe 'Mechanic Show Page' do
         expect(page).to_not have_content(@jaws.name)
       end
 
-      xit 'displays the list of rides being worked on by thrill rating' do
+      it 'displays the list of rides being worked on by thrill rating' do
         visit "/mechanics/#{@mech2.id}"
 
         expect(@hurler.name).to appear_before(@jaws.name)

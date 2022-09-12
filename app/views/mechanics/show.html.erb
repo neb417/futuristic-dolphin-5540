@@ -8,7 +8,7 @@
   <% @rides.each do |ride| %>
     <%if ride.open == true %>
       <div id="ride_<%=ride.id%>">
-        <li><%= ride.name %></li>
+        <li><%= ride.name %>, Thrill Rating <% ride.thrill_rating%></li>
     <% else %>
       <% next %>
     <% end %>
