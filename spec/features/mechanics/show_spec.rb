@@ -44,6 +44,13 @@ RSpec.describe 'Mechanic Show Page' do
         expect(page).to have_content(@hurler.name)
         expect(page).to have_content(@scrambler.name)
 
+        within("#ride_#{@hurler.id}") do
+          expect(page).to have_content(@hurler.name)
+          expect(page).to have_content(@hurler.thrill_rating)
+          expect(page).to_not have_content(@scrambler.name)
+          expect(page).to_not have_content(@ferris.name)
+        end
+
         expect(page).to_not have_content(@ferris.name)
         expect(page).to_not have_content(@jaws.name)
       end
